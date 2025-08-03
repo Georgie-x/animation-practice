@@ -1,6 +1,6 @@
 function Animation3() {
 	return (
-		<div className="bg"></div>
+		<div className="animation"></div>
 	)
 }
 

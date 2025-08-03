@@ -1,11 +1,17 @@
-import Animation1 from "./components/animation1"
-
-
+import { useState } from "react"
+import { AnimationCentral, Nav, Header } from "./components"
 
 function App() {
-	return <div className='animation'>
-    <Animation1 />
-  </div>
+	const [animation, setAnimation] = useState<number>(1)
+
+	return (
+		<>
+			<Header />
+			<Nav />
+      <AnimationCentral />
+		
+		</>
+	)
 }
 
 export default App

@@ -1,6 +1,6 @@
 function Animation2() {
 	return (
-		<div className="bg"><h1 className="text-fade">Georgie</h1></div>
+		<div className="animation"><h1 className="text-fade">Georgie</h1></div>
 	)
 }
 
