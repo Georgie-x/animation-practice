@@ -1,15 +1,15 @@
 import { useState } from "react"
-import { AnimationCentral, Nav, Header } from "./components"
+import { AnimationCentral, Header } from "./components"
+import type { AniChoice } from "./types"
 
 function App() {
-	const [animation, setAnimation] = useState<number>(1)
+	const [animation, setAnimation] = useState<AniChoice>(1)
 
 	return (
 		<>
 			<Header />
-			<Nav />
-      <AnimationCentral />
-		
+
+			<AnimationCentral animation={animation} setAnimation={setAnimation} />
 		</>
 	)
 }
