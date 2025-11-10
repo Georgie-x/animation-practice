@@ -11,7 +11,10 @@
 	--bg-color: hsl(175, 63%, 67%);
 	--highlight-color: hsl(327, 57%, 45%);
 	--sun-color: hsl(60, 100%, 50%);
-	--sky-color: hsl(208, 56%, 65%);
+	--sky-day-color: hsl(208, 56%, 65%);
+	--sky-night-color: hsl(208, 82%, 22%);
+	--land-day-color: hsl(108, 76%, 37%);
+	--land-night-color: hsl(108, 97%, 13%);
 	--moon-color: hsl(209, 56%, 91%);
 }
 
@@ -81,18 +84,51 @@ li {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	background-color: var(--sky-color);
+	background-color: var(--sky-day-color);
 	overflow: hidden;
 	opacity: 100%;
+	animation: skyColor 12s linear infinite;
+}
+
+@keyframes skyColor {
+	0%,
+	100% {
+		background-color: var(--sky-night-color);
+	}
+	50% {
+		background-color: var(--sky-day-color);
+	}
+}
+.land {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	height: 70px;
+	width: 320px;
+	filter: blur(2px);
+	clip-path: ellipse(85% 100% at 50% 100%);
+	background-color: var(--land-day-color);
+	animation: landColor 12s linear 6s infinite;
+}
+
+@keyframes landColor {
+	0%,
+	100% {
+		background-color: var(--land-night-color);
+	}
+	50% {
+		background-color: var(--land-day-color);
+	}
 }
 
 .sun {
 	position: absolute;
-	background-color: yellow;
+	background-color: hsl(60, 94%, 66%);
+	filter: blur(1px);
 	height: 80px;
 	width: 80px;
 	border-radius: 50%;
-	offset-path: path("M 400 100 A 20 5 0 0 0 -40 100");
+	offset-path: path("M 400 110 A 200 50 0 0 0 -80 110");
 	animation: moveSun 12s linear infinite;
 }
 
@@ -100,36 +136,31 @@ li {
 	0% {
 		offset-distance: 0%;
 	}
-	50%, 100% {
-		offset-distance: 100%;
-	}
-}
-
-.moon {
-	background-color: azure;
-	height: 80px;
-	width: 80px;
-	border-radius: 50%;
-	animation: moveMoon 12s linear infinite;
-	offset-path: path("M 400 100 A 20 5 0 0 0 -40 100");
-}
-
-@keyframes moveMoon {
-	0%, 50% {
-		offset-distance: 0%;
-	}
+	75%,
 	100% {
 		offset-distance: 100%;
 	}
 }
 
-.land {
+.moon {
 	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	height: 60px;
-	width: 320px;
-	background-color: darkgreen;
+	background-color: azure;
+	filter: blur(1px);
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	animation: moveMoon 12s linear 6s infinite;
+	offset-path: path("M 400 110 A 200 50 0 0 0 -80 100");
+}
+
+@keyframes moveMoon {
+	0% {
+		offset-distance: 0%;
+	}
+	75%,
+	100% {
+		offset-distance: 100%;
+	}
 }
 
 .text-fade {
