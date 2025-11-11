@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--text-color: hsl(253, 63%, 46%);
+	--bg-color: hsl(175, 63%, 67%);
+	--highlight-color: hsl(327, 57%, 45%);
+	--sun-color: hsl(60, 100%, 50%);
+	--sky-day-color: hsl(208, 56%, 65%);
+	--sky-night-color: hsl(208, 82%, 22%);
+	--land-day-color: hsl(108, 76%, 37%);
+	--land-night-color: hsl(108, 97%, 23%);
+	--moon-color: hsl(209, 56%, 91%);
+	--house-color: hsl(0, 100%, 27%);
+	--window-on-color: white;
+	--window-off-color: grey;
+}
+
+html {
+	height: 100%;
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+body {
+	height: 100%;
+	max-width: 960px;
+	background-color: var(--bg-color);
+	margin: auto;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	height: 90vh;
+	max-width: 960px;
+	width: 100vw;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 6vh;
+}
+.nav {
+	background-color: var(--highlight-color);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 4vh;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+li {
+	display: flex;
+background-color: brown;
+	justify-content: center;
+	align-items: center;
+}
+
+button {
+	width: 100px;
+	height: 20px;
+}
+
+.animation {
+	background-color: var(--bg-color);
+	height: 240px;
+	width: 320px;
+	margin: auto;
+	border: 2px ridge var(--highlight-color);
+}

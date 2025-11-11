@@ -1,0 +1,23 @@
+.text-fade {
+	color: brown;
+	text-align: center;
+	animation: fadeText 2s linear infinite;
+}
+
+@keyframes fadeText {
+	0% {
+		opacity: 100%;
+	}
+	25% {
+		opacity: 50%;
+	}
+	50% {
+		opacity: 0%;
+	}
+	75% {
+		opacity: 50%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}

@@ -1,0 +1,80 @@
+.sky {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color: var(--sky-day-color);
+	overflow: hidden;
+	opacity: 100%;
+	animation: skyColor 12s linear infinite;
+}
+@keyframes skyColor {
+	0%,
+	100% {
+		background-color: var(--sky-night-color);
+	}
+	50% {
+		background-color: var(--sky-day-color);
+	}
+}
+
+.land {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	height: 70px;
+	width: 320px;
+	filter: blur(2px);
+	clip-path: ellipse(85% 100% at 50% 100%);
+	background-color: var(--land-day-color);
+	animation: landColor 12s linear infinite;
+}
+@keyframes landColor {
+	0%,
+	100% {
+		background-color: var(--land-night-color);
+	}
+	50% {
+		background-color: var(--land-day-color);
+	}
+}
+
+.sun {
+	position: absolute;
+	background-color: hsl(60, 94%, 66%);
+	filter: blur(1px);
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	offset-path: path("M 400 110 A 200 50 0 0 0 -80 110");
+	animation: moveSun 12s linear infinite;
+}
+@keyframes moveSun {
+	0% {
+		offset-distance: 0%;
+	}
+	75%,
+	100% {
+		offset-distance: 100%;
+	}
+}
+
+.moon {
+	position: absolute;
+	background-color: azure;
+	filter: blur(1px);
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	animation: moveMoon 12s linear 6s infinite;
+	offset-path: path("M 400 110 A 200 50 0 0 0 -80 100");
+}
+@keyframes moveMoon {
+	0% {
+		offset-distance: 0%;
+	}
+	75%,
+	100% {
+		offset-distance: 100%;
+	}
+}
+

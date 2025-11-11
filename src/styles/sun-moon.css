@@ -1,84 +1,4 @@
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
 
-:root {
-	--text-color: hsl(253, 63%, 46%);
-	--bg-color: hsl(175, 63%, 67%);
-	--highlight-color: hsl(327, 57%, 45%);
-	--sun-color: hsl(60, 100%, 50%);
-	--sky-day-color: hsl(208, 56%, 65%);
-	--sky-night-color: hsl(208, 82%, 22%);
-	--land-day-color: hsl(108, 76%, 37%);
-	--land-night-color: hsl(108, 97%, 13%);
-	--moon-color: hsl(209, 56%, 91%);
-}
-
-html {
-	height: 100%;
-	font-size: 16px;
-	scroll-behavior: smooth;
-}
-
-body {
-	height: 100%;
-	max-width: 960px;
-	background-color: var(--bg-color);
-	margin: auto;
-}
-
-main {
-	display: flex;
-	flex-direction: column;
-	height: 90vh;
-	max-width: 960px;
-	width: 100vw;
-}
-
-button {
-	width: 75px;
-	height: 40px;
-}
-header {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 6vh;
-}
-.nav {
-	background-color: var(--highlight-color);
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	height: 4vh;
-}
-ul,
-ol {
-	list-style: none;
-}
-
-li {
-	display: flex;
-
-	height: 40px;
-	width: 75px;
-	justify-content: center;
-	align-items: center;
-}
-
-/* animations */
-
-.animation {
-	background-color: var(--bg-color);
-	height: 240px;
-	width: 320px;
-	margin: auto;
-	border: 2px ridge var(--highlight-color);
-}
 
 .sky {
 	position: relative;
@@ -108,7 +28,7 @@ li {
 	filter: blur(2px);
 	clip-path: ellipse(85% 100% at 50% 100%);
 	background-color: var(--land-day-color);
-	animation: landColor 12s linear 6s infinite;
+	animation: landColor 12s linear infinite;
 }
 
 @keyframes landColor {

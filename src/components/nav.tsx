@@ -5,9 +5,9 @@ function Nav({ setAnimation }: NavProps) {
 	
 			<nav>
 				<ol className='nav'>
-					<li onClick={() => setAnimation(1)}>1</li>
-					<li onClick={() => setAnimation(2)}>2</li>
-					<li onClick={() => setAnimation(3)}>3</li>
+					<li><button onClick={() => setAnimation(1)}>Sun/moon</button></li>
+					<li><button onClick={() => setAnimation(2)}>Text effects</button></li>
+					<li><button onClick={() => setAnimation(3)}>Parallax</button></li>
 				</ol>
 			</nav>
 
