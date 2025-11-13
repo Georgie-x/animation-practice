@@ -1,21 +1,87 @@
-.text-fade {
+.oneSec {
 	color: brown;
 	text-align: center;
-	animation: fadeText 2s linear infinite;
+	animation: fadeOne 1s linear infinite;
 }
 
-@keyframes fadeText {
+@keyframes fadeOne {
 	0% {
 		opacity: 100%;
-	}
-	25% {
-		opacity: 50%;
 	}
 	50% {
 		opacity: 0%;
 	}
-	75% {
-		opacity: 50%;
+	100% {
+		opacity: 100%;
+	}
+}
+
+.twoSec {
+	color: brown;
+	text-align: center;
+	animation: fadeTwo 2s linear infinite;
+}
+
+@keyframes fadeTwo {
+	0% {
+		opacity: 100%;
+	}
+	50% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+
+.fourSec {
+	color: rgb(202, 7, 7);
+	text-align: center;
+	animation: fadeFour 4s linear infinite;
+}
+
+@keyframes fadeFour {
+	0% {
+		opacity: 100%;
+	}
+	50% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+
+.eightSec {
+	color: rgb(22, 194, 80);
+	text-align: center;
+	animation: fadeEight 8s linear infinite;
+}
+
+@keyframes fadeEight {
+	0% {
+		opacity: 100%;
+	}
+	50% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+
+.sixteenSec {
+	color: rgb(107, 9, 94);
+	text-align: center;
+	animation: fadeSixteen 16s linear infinite;
+}
+
+@keyframes fadeSixteen {
+	0% {
+		opacity: 100%;
+	}
+	50% {
+		opacity: 0%;
 	}
 	100% {
 		opacity: 100%;

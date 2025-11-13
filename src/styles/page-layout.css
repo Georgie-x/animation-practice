@@ -77,8 +77,13 @@ button {
 
 .animation {
 	background-color: var(--bg-color);
-	height: 520px;
+	height: 240px;
 	width: 320px;
 	margin: auto;
 	border: 2px ridge var(--highlight-color);
 }
+
+.animation.parallax {
+height: 720px;
+}
+
