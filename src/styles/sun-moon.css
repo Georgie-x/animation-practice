@@ -1,5 +1,3 @@
-
-
 .sky {
 	position: relative;
 	height: 100%;
@@ -40,25 +38,118 @@
 		background-color: var(--land-day-color);
 	}
 }
-
-.tower{
+.roof {
+	position: absolute;
+	bottom: 108px;
+	left: 120px;
+	height: 20px;
+	width: 80px;
+	filter: blur(1px);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	z-index: 3;
+	background-color: var(--roof-color);
+}
+.house {
 	position: absolute;
 	bottom: 50px;
 	left: 130px;
-	height:60px;
-	width:60px;
+	height: 60px;
+	width: 60px;
 	z-index: 1;
-	background-color: var(--tower-color);
-	animation: towerColor 12s linear infinite;
+
+	background-color: var(--house-day-color);
+	animation: houseColor 12s linear infinite;
 }
-@keyframes towerColor {
+@keyframes houseColor {
 	0%,
 	100% {
-		background-color: var(--tower-night-color);
+		background-color: var(--house-night-color);
 	}
 	50% {
-		background-color: var(--tower-day-color);
+		background-color: var(--house-day-color);
 	}
+}
+
+.window1 {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	bottom: 35px;
+	left: 10px;
+	filter: blur(1px);
+	background-color: var(--window-off-color);
+	animation: window1 12s linear infinite;
+}
+@keyframes window1 {
+	0%,
+	81%,
+	86%,
+	100% {
+		background-color: var(--window-off-color);
+	}
+	82%,
+	85% {
+		background-color: var(--window-on-color);
+	}
+}
+
+.window2 {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	bottom: 35px;
+	left: 35px;
+	filter: blur(1px);
+	background-color: var(--window-off-color);
+	animation: window2 12s linear infinite;
+}
+
+@keyframes window2 {
+	0%,
+	59%,
+	98%,
+	100% {
+		background-color: var(--window-off-color);
+	}
+	60%,
+	97% {
+		background-color: var(--window-on-color);
+		
+	}
+}
+
+.window3 {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	bottom: 10px;
+	left: 10px;
+	filter: blur(1px);
+	background-color: var(--window-off-color);
+	animation: window3 12s linear infinite;
+}
+
+@keyframes window3 {
+	0%,
+	62%,
+	84%,
+	100% {
+		background-color: var(--window-off-color);
+	}
+	63%,
+	83% {
+		background-color: var(--window-on-color);
+	}
+}
+
+.door {
+	position: absolute;
+	width: 15px;
+	height: 25px;
+	bottom: 0px;
+	left: 35px;
+	filter: blur(1px);
+	background-color: var(--door-color);
 }
 
 .sun {
@@ -102,4 +193,3 @@
 		offset-distance: 100%;
 	}
 }
-

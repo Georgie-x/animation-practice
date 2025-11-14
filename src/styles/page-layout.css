@@ -15,12 +15,13 @@
 	--sky-night-color: hsl(208, 82%, 22%);
 	--land-day-color: hsl(108, 76%, 37%);
 	--land-night-color: hsl(108, 97%, 23%);
-		--tower-day-color: hsl(107, 6%, 43%);
-	--tower-night-color: hsl(111, 9%, 16%);
+	--house-day-color: hsl(355, 80%, 27%);
+	--house-night-color: hsl(351, 86%, 9%);
 	--moon-color: hsl(209, 56%, 91%);
-	--tower-color: hsl(41, 70%, 35%);
 	--window-on-color: white;
 	--window-off-color: grey;
+	--door-color: red;
+	--roof-color: rgb(65, 63, 63);
 }
 
 html {
@@ -65,7 +66,7 @@ ol {
 
 li {
 	display: flex;
-background-color: brown;
+	background-color: brown;
 	justify-content: center;
 	align-items: center;
 }
@@ -84,6 +85,5 @@ button {
 }
 
 .animation.parallax {
-height: 720px;
+	height: 720px;
 }
-

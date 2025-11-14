@@ -4,10 +4,12 @@ function Animation1() {
 			<div className='sky'>
 				<div className='sun'></div>
 				<div className='moon'></div>
-				<div className='tower'>
-					<div className='window'></div>
+				<div className='roof'></div>
+				<div className='house'>
+					<div className='window1'></div>
+					<div className='window2'></div>
+					<div className='window3'></div>
 					<div className='door'></div>
-					<div className='roof'></div>
 				</div>
 				<div className='land'></div>
 			</div>
