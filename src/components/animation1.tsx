@@ -11,6 +11,7 @@ function Animation1() {
 					<div className='window3'></div>
 					<div className='door'></div>
 				</div>
+				<div className='bus'></div>
 				<div className='land'></div>
 			</div>
 		</div>

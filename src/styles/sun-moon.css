@@ -83,12 +83,12 @@
 @keyframes window1 {
 	0%,
 	81%,
-	86%,
+	89%,
 	100% {
 		background-color: var(--window-off-color);
 	}
 	82%,
-	85% {
+	88% {
 		background-color: var(--window-on-color);
 	}
 }
@@ -114,7 +114,6 @@
 	60%,
 	97% {
 		background-color: var(--window-on-color);
-		
 	}
 }
 
@@ -132,12 +131,12 @@
 @keyframes window3 {
 	0%,
 	62%,
-	84%,
+	81%,
 	100% {
 		background-color: var(--window-off-color);
 	}
 	63%,
-	83% {
+	80% {
 		background-color: var(--window-on-color);
 	}
 }
@@ -150,6 +149,48 @@
 	left: 35px;
 	filter: blur(1px);
 	background-color: var(--door-color);
+	animation: doorOpen 12s linear infinite;
+}
+
+@keyframes doorOpen {
+	0%,
+	20%,
+	22%,
+	70%,
+	72%, 100% {
+		background-color: var(--door-color);
+	}
+	21%,
+	71% {
+		background-color: var(--window-off-color);
+	}
+}
+
+.bus {
+	position: absolute;
+	width: 40px;
+	height: 30px;
+	border-radius: 2px 2px 6px 6px;
+	z-index: 7;
+	background-color: var(--bus-color);
+	offset-path: path("M 400 205 A 250 40 0 0 0 -80 205");
+	animation: moveBus 6s linear infinite;
+}
+
+@keyframes moveBus {
+	0%,
+	20% {
+		offset-distance: 0%;
+	}
+	25%,
+	35% {
+		offset-distance: 38%;
+	}
+
+	45%,
+	100% {
+		offset-distance: 100%;
+	}
 }
 
 .sun {
